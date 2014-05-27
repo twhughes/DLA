@@ -2,32 +2,30 @@
 
 Diffusion Limited Aggregation running on the browser with javascript.
 
+This is only a few hours old and still pretty rough.  Please excuse the simplicity.
+
+## Basic Idea
+
+on a binary grid with only a central point active, random walkers are added and move until they stick to an active grid point, resulting in an interesting shape.
+
 ## Installation
 
 Installing is easy
 
-cd to a directory of your choosing, then::
+cd to a directory of your choosing, then
 	   
 	git clone git@github.com:ShrimCity/DLA.git
    
-to copy the code from github into a directory called "DLA".  Then simply navigate to the file on your browser::
+Then simply navigate to the file on your browser
 
-   	file:///Users/user/path/to/DLA/index.html
+   	file:///path/to/DLA/index.html
 
+## Features I would like to add soon
 
-
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+-  Radius of entry and exit of random walkers is not optimized to speed up growth
+-  GUI-style options such as color chooser, stop, start, speed, etc.
+-  Suggestions welcome
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+Use this in whatever way is useful to you!
