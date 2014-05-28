@@ -16,7 +16,7 @@ map[Math.floor(size/2)][Math.floor(size/2)] = 1;
 
 var radius = 3;
 
-document.writeln("<canvas id = 'map' width='800' height='800'>< width='800' height='800'><font color='FFFFFF'>Your browser does not support canvas.</font></canvas>");
+document.writeln("<canvas id = 'map' width='500' height='500' align='left'><font color='FFFFFF'>Your browser does not support canvas.</font></canvas>");
 var canvas = document.getElementById("map");
 var context = canvas.getContext("2d");
 document.writeln("<table><tr>");
@@ -24,6 +24,7 @@ document.writeln("<table><tr>");
 var c1=Math.floor(Math.random()*255);
 var c2=Math.floor(Math.random()*255);
 var c3=Math.floor(Math.random()*255);
+
 
 function NewRadius(cx,cy,radius){
 	var radius2 = Math.sqrt( (cx-size/2)*(cx-size/2) + (cy-size/2)*(cy-size/2) );
@@ -36,7 +37,7 @@ function NewRadius(cx,cy,radius){
 
 function CheckRadius(cx,cy,radius){
 	var radius2 = Math.sqrt( (cx-size/2)*(cx-size/2) + (cy-size/2)*(cy-size/2) );
-	if (radius2 > radius*1.5){
+	if (radius2 > radius*1.6){
 		return 0;
 	} else {
 		return 1;
@@ -45,8 +46,8 @@ function CheckRadius(cx,cy,radius){
 				
 function DLA_setup(map){
 	var phi = Math.random()*Math.PI*2;
-	cx = Math.floor(Math.cos(phi)*(radius*1.2)+size/2)+1;
-	cy = Math.floor(Math.sin(phi)*(radius*1.2)+size/2)+1;
+	cx = Math.floor(Math.cos(phi)*(radius*1.3)+size/2);
+	cy = Math.floor(Math.sin(phi)*(radius*1.3)+size/2);
 	var nope = 0;
 	var count = 0;
 	while (nope == 0){
@@ -112,7 +113,26 @@ function main(map){
 	render(map);
 }
 
-var run = setInterval(function(){main(map);},.1);
+function start_stop(yn){
+	var id = 0;
+	if (yn == "y"){
+	    id = setInterval(function(){main(map);} , .1);
+	} else {
+		clearInterval(id);
+	}
+}
+//canvas.addEventListener('click', function(event) {
+//	setInterval(function(){
+//		main(map);
+//	} , .1);	
+//   }, false);
+
+//var button = getElementById("btDLA");
+
+//setInterval(function(){                                                                                                                                                                           
+//       main(map);                                                                                                                                                                                
+//     } , .1);
+
 
 
 				
