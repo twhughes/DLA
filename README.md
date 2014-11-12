@@ -2,15 +2,11 @@
 
 Diffusion Limited Aggregation running on the browser with javascript.
 
-This is only a few hours old and still pretty rough.  Please excuse the simplicity.
-
 ## Basic Idea
 
 on a binary grid with only a central point active, random walkers are added and move until they stick to an active grid point, resulting in an interesting shape.
 
 ## Installation
-
-Installing is easy
 
 cd to a directory of your choosing, then
 	   
@@ -19,6 +15,10 @@ cd to a directory of your choosing, then
 Then simply navigate to the file on your browser
 
    	file:///path/to/DLA/index.html
+   	
+or ...
+	
+	open index.html
 
 ## Features I would like to add soon
 
