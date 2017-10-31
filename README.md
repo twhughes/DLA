@@ -8,15 +8,7 @@ on a binary grid with only a central point active, random walkers are added and 
 
 ## Installation
 
-cd to a directory of your choosing, then
-	   
-	git clone git@github.com:ShrimCity/DLA.git
-   
-Then simply navigate to the file on your browser
-
-   	file:///path/to/DLA/index.html
-   	
-or ...
+simply
 	
 	open index.html
 
